@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>input de cartão de crédito</title>
+  </head>
+  <body>
+    <main>
+      <!-- Cartão de credito -->
+      <section class="card-section">
+        <div class="card front-card">
+          <img src="./public/brand.svg" alt="" class="card-logo" />
+          <p class="card-number">#### #### #### ####</p>
+          <div class="card-footer">
+            <div>
+              <p>Titular</p>
+              <p class="card-name">Seu Nome</p>
+            </div>
+            <div class="card-expiry-section">
+              <p>Vencimento</p>
+              <p>
+                <span class="card-exp-month">MM</span>/<span
+                  class="card-exp-year"
+                  >AA</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card back-card">
+          <div class="card-magnetic-strip"></div>
+          <p class="card-cvv">###</p>
+          <img src="./public/brand.svg" alt="" class="card-logo" />
+        </div>
+      </section>
+      <!-- Formulário -->
+      <section>
+        <h3>Digite os dados do seu Cartão</h3>
+        <form action="" method="get">
+          <label for="cc-number">Número do Cartão</label>
+          <input
+            type="text"
+            id="cc-number"
+            placeholder="1234 1234 1234 1234"
+            maxlength="19"
+          />
+
+          <label for="cc-name">Nome do Titular</label>
+          <input type="text" id="cc-name" placeholder="Seu Nome" />
+
+          <label>Validade</label>
+          <div class="form-expiry-section">
+            <input
+              type="text"
+              id="cc-exp-month"
+              placeholder="MM"
+              maxlength="2"
+            />
+            <input
+              type="text"
+              id="cc-exp-year"
+              placeholder="AAAA"
+              maxlength="2"
+            />
+          </div>
+
+          <label for="cc-cvv">Código de verificação</label>
+          <input type="text" id="cc-cvv" placeholder="123" maxlength="3" />
+        </form>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
